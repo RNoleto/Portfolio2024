@@ -1,9 +1,27 @@
+/* 
+Theme Name: Portfolio Noleto 2023
+Theme URI: http://rnoleto.com
+Author: Ramon Noleto
+Autor URI: http://rnoleto.com
+Description: tema criado para o portfolio versão 2024
+Version: 1.0
+*/
+
+/* Fonts 
+Principal: Oxanium
+Secundaria: Outfit
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Oxanium:wght@200..800&display=swap');
+
 /* Reset */
 
 body{
+    max-width: 1440px;
     padding: 0px;
     margin: 0px;
     line-height: 1;
+    margin: 0 auto;
 }
 
 h1{
@@ -15,4 +33,18 @@ ul{
 }
 li{
     list-style: none;
+}
+
+
+/* BASE */
+
+.container{
+    background-color: pink;
+    width: 100%;
+    display: flex;
+}
+
+.content{
+    background: yellow;
+    width: 50%;
 }
