@@ -9,13 +9,12 @@ function the_field2($key, $page_id = 0){
     echo get_field2($key, $page_id);
 }
 
-
 // Campos para página Home sessão Job
 add_action('cmb2_admin_init', 'cmb2_fields_jobs');
 function cmb2_fields_jobs(){
     $cmb = new_cmb2_box([
         'id' => 'jobs_box',
-        'title' => 'Jobs',
+        'title' => 'Sessão de Trabalhos',
         'object_types' => ['page'],
         'show_on' => [
             'key' => 'page-template',
@@ -24,7 +23,7 @@ function cmb2_fields_jobs(){
     ]);
 
     $jobs = $cmb->add_field([
-        'name' => 'Jobs',
+        'name' => 'Trabalhos',
         'id' => 'jobs',
         'type' => 'group',
        'repeatable' => true,

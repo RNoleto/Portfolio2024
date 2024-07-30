@@ -28,36 +28,36 @@
     <div class="relative">
         <section id="hero">
             <div class="container">
+                <!-- Inserção de campos Hero usando wordpress como CMS -->
                 <div class="content">
                     <p class="tag">Olá, sou</p>
-                    <h1 class="text-principal" style="margin-left: 24px;">Ramon Noleto</h1>
-                    <p class="sub" style="margin-left: 48px;">Desenvolvedor Web</p>
+                    <h1 class="text-principal" style="margin-left: 24px;"><?php echo get_post_meta(get_the_ID(), 'nome_hero', true); ?></h1>
+                    <p class="sub" style="margin-left: 48px;"><?php echo get_post_meta(get_the_ID(), 'cargo_hero', true); ?></p>
                 </div>
                 <div class="content">
                     <p class="tag">E</p>
-                    <p class="sub" style="margin-left: 12px;">Desenvolvedor Web</p>
-                    <p class="sub" style="margin-left: 12px; width: 386px;">Apaixonado por tecnolgia e sempre em busca
-                        de inovação.</p>
-                    <p><i class="fas fa-map-marker-alt"></i>Itajaí - SC</p>
+                    <p class="sub" style="margin-left: 12px;"><?php echo get_post_meta(get_the_ID(), 'cargo_hero', true); ?></p>
+                    <p class="sub" style="margin-left: 12px; width: 386px;"><?php echo get_post_meta(get_the_ID(), 'descricao_hero', true); ?></p>
+                    <p><i class="fas fa-map-marker-alt"></i><?php echo get_post_meta(get_the_ID(), 'localizacao', true); ?></p>
                 </div>
-
+                <!-- Fim de Inserção de campos Hero usando wordpress como CMS -->
             </div>
         </section>
     </div>
     <div class="divider"></div>
     <section id="resume">
         <div class="container">
+            <!-- Inserção de campos Resume usando wordpress como CMS -->
             <div class="content">
                 <p class="tag">Sou</p>
-                <p class="text-principal">Freelancer, UI Designer & Desenvolvedor Web</p>
-                <p class="text-second">Lorem ipsum dolor sit amet consectetur. Integer justo bibendum diam sagittis in.
-                    Tellus faucibus turpis enim
-                    viverra eget interdum.</p>
+                <p class="text-principal"><?php echo get_post_meta(get_the_ID(), 'titulo_resumo', true); ?></p>
+                <p class="text-second"><?php echo get_post_meta(get_the_ID(), 'descricao_resumo', true); ?></p>
             </div>
             <div class="content">
                 <img src="https://t4.ftcdn.net/jpg/00/84/13/15/360_F_84131506_fV8Szg1O5j9wB2ORZR6hxSv5PNCPIw0o.jpg"
                     alt="imagem">
             </div>
+            <!-- Fim de Inserção de campos Resume usando wordpress como CMS -->
         </div>
     </section>
     <div class="divider"></div>
@@ -83,23 +83,15 @@
     </section>
     <div class="divider"></div>
     <section id="aboutme">
+        <!-- Inserção de Sobre Mim usando wordpress como CMS -->
         <div class="container">
             <div class="content">
                 <p class="tag">Sobre Mim</p>
-                <p class="text-principal">Ramon Ribeiro Noleto</p>
+                <p class="text-principal"><?php echo get_post_meta(get_the_ID(), 'titulo_aboutme', true); ?></p>
             </div>
             <div class="grid">
                 <div class="content">
-                    <p class="text-second">Lorem ipsum dolor sit amet consectetur. Commodo a vitae ornare eget
-                        venenatis.
-                        Viverra ultricies eu urna
-                        dignissim blandit nibh ultrices enim. Feugiat neque tempor tincidunt morbi nisl. Nibh rhoncus
-                        lectus
-                        et
-                        iaculis.
-                    </p>
-                    <br><br>
-                    <p class="text-second">Lorem ipsum dolor sit amet consectetur. Vitae sagittis vitae aliquam.</p>
+                    <p class="text-second"><?php echo get_post_meta(get_the_ID(), 'descricao_aboutme', true); ?></p>
                 </div>
                 <div class="content">
                     <p class="text-second">Pós Graduado em Engenharia de Software</p>
@@ -107,6 +99,7 @@
                 </div>
             </div>
         </div>
+        <!-- Fim de Inserção de Sobre Mim -->
     </section>
 </body>
 
