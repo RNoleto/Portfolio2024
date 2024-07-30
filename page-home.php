@@ -1,3 +1,6 @@
+<?php
+// Template Name: Home
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -5,7 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Style CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css">
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>RNoleto-2024</title>
@@ -67,10 +70,13 @@
             </div>
             <div class="content">
                 <div class="image-grid">
-                    <div class="image image-rectangular" data-title="Título 1"></div>
-                    <div class="image image-large" data-title="Título 2 - Projeto Destaque"></div>
-                    <div class="image image-square" data-title="Título 3"></div>
-                    <div class="image image-square" data-title="Título 4"></div>
+                    <!-- Inserção de trabalhos usando wordpress como CMS -->
+                    <?php $jobs = get_field2('jobs');
+                    if(isset($jobs)){
+                        foreach($jobs as $job) { ?> 
+                    <div class="image <?php echo $job['style']; ?>" data-title="<?php echo $job['nome']; ?>"><img src="<?php echo $job['imagem']; ?>" alt=""></div>
+                    <?php }} ?>
+                    <!-- Fim de Inserção de trabalhos -->
                 </div>
             </div>
         </div>
