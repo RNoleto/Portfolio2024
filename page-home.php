@@ -74,7 +74,11 @@
                     <?php $jobs = get_field2('jobs');
                     if(isset($jobs)){
                         foreach($jobs as $job) { ?> 
-                    <div class="image <?php echo $job['style']; ?>" data-title="<?php echo $job['nome']; ?>"><img src="<?php echo $job['imagem']; ?>" alt=""></div>
+                        <div class="image <?php echo $job['style']; ?>" data-title="<?php echo $job['nome']; ?>">
+                        <a href="<?php echo $job['url'];?>" target="_blank">
+                            <img src="<?php echo $job['imagem']; ?>" alt="">
+                        </a>    
+                        </div>
                     <?php }} ?>
                     <!-- Fim de Inserção de trabalhos -->
                 </div>
@@ -100,16 +104,32 @@
                         foreach($infos as $info) { ?>
                         <p class="text-second"><?php echo $info['info']; ?></p>
                     <?php }}?>
-
-                    <!-- <p class="text-second">Pós Graduado em Engenharia de Software</p>
-                    <p class="text-second">Freelancer & Desenvolvedor Web</p> -->
-                    
                     <!-- Fim de Inserção de Informações -->
                 </div>
             </div>
         </div>
         <!-- Fim de Inserção de Sobre Mim -->
     </section>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        // Inicialização do ScrollReveal
+        ScrollReveal().reveal('.tag', {
+            distance: '50px',
+            origin: 'left',
+            duration: 1000,
+            opacity: 0,
+            reset: true
+        });
+
+        ScrollReveal().reveal('.text-principal', {
+            distance: '50px',
+            origin: 'left',
+            duration: 1800,
+            opacity: 0,
+            reset: true
+        });
+    </script>
 </body>
 
 </html>
