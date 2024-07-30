@@ -94,8 +94,17 @@
                     <p class="text-second"><?php echo get_post_meta(get_the_ID(), 'descricao_aboutme', true); ?></p>
                 </div>
                 <div class="content">
-                    <p class="text-second">Pós Graduado em Engenharia de Software</p>
-                    <p class="text-second">Freelancer & Desenvolvedor Web</p>
+                    <!-- Inserção de informações usando wordpress como CMS -->
+                    <?php $infos = get_field('infos'); 
+                    if(isset($infos)){
+                        foreach($infos as $info) { ?>
+                        <p class="text-second"><?php echo $info['info']; ?></p>
+                    <?php }}?>
+
+                    <!-- <p class="text-second">Pós Graduado em Engenharia de Software</p>
+                    <p class="text-second">Freelancer & Desenvolvedor Web</p> -->
+                    
+                    <!-- Fim de Inserção de Informações -->
                 </div>
             </div>
         </div>

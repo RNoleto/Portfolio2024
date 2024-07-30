@@ -9,6 +9,37 @@ function the_field2($key, $page_id = 0){
     echo get_field2($key, $page_id);
 }
 
+add_action('cmb2_admin_init', 'cmb2_fields_infos');
+function cmb2_fields_infos(){
+    $cmb = new_cmb2_box([
+        'id' => 'infos_box',
+        'title'=> 'Sessão de Aboutme',
+        'object_types' => ['page'],
+        'show_on' => [
+            'key' => 'page-template',
+            'value' => ['page-home.php']
+        ],
+    ]);
+
+    $infos = $cmb->add_field([
+        'name' => 'Infos',
+        'id' => 'infos',
+        'type' => 'group',
+        'repeatable' => true,
+        'options' => [
+            'group_title' => 'Informação {#}',
+            'add_button' => 'Adicionar Informação',
+            'sortable' => true,
+        ],
+    ]);
+
+    $cmb->add_group_field($infos, [
+        'name' => 'Informação',
+        'id' => 'info',
+        'type' => 'text',
+    ]);
+}
+
 // Campos para página Home sessão Job
 add_action('cmb2_admin_init', 'cmb2_fields_jobs');
 function cmb2_fields_jobs(){
