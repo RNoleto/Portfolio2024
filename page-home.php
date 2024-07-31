@@ -111,6 +111,7 @@
         <!-- Fim de Inserção de Sobre Mim -->
     </section>
 
+    <!-- Importação e configuração de animações usando ScrollReveal -->
     <script src="https://unpkg.com/scrollreveal"></script>
     <script>
         // Inicialização do ScrollReveal
@@ -121,7 +122,7 @@
             opacity: 0,
             reset: true
         });
-
+        
         ScrollReveal().reveal('.text-principal', {
             distance: '100px',
             origin: 'left',
@@ -177,7 +178,7 @@
         //Animação de imagens dos projetos
         ScrollReveal().reveal('.image-rectangular', {
             distance: '50px',
-            origin: 'bottom',
+            origin: 'left',
             duration: 2000,
             opacity: 0,
             reset: true

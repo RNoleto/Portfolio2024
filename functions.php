@@ -13,7 +13,7 @@ add_action('cmb2_admin_init', 'cmb2_fields_infos');
 function cmb2_fields_infos(){
     $cmb = new_cmb2_box([
         'id' => 'infos_box',
-        'title'=> 'Sessão de Aboutme',
+        'title'=> 'Itens Sessão de Sobre Mim',
         'object_types' => ['page'],
         'show_on' => [
             'key' => 'page-template',
