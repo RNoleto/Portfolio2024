@@ -95,14 +95,14 @@
             </div>
             <div class="grid">
                 <div class="content">
-                    <p class="text-second"><?php echo get_post_meta(get_the_ID(), 'descricao_aboutme', true); ?></p>
+                <p class="text-second"><?php echo get_post_meta(get_the_ID(), 'descricao_aboutme', true); ?></p>
                 </div>
                 <div class="content">
                     <!-- Inserção de informações usando wordpress como CMS -->
                     <?php $infos = get_field('infos'); 
                     if(isset($infos)){
                         foreach($infos as $info) { ?>
-                        <p class="text-second"><?php echo $info['info']; ?></p>
+                        <p class="text-second"><i class="fa-solid fa-circle-check"></i><?php echo $info['info']; ?></p>
                     <?php }}?>
                     <!-- Fim de Inserção de Informações -->
                 </div>

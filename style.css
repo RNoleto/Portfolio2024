@@ -242,3 +242,7 @@ li{
     display: flex;
     gap: 24px;
 }
+
+#aboutme .grid i{
+    margin-right: 4px;
+}
