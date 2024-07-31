@@ -117,18 +117,63 @@
         ScrollReveal().reveal('.tag', {
             distance: '50px',
             origin: 'left',
-            duration: 1000,
+            duration: 1500,
             opacity: 0,
             reset: true
         });
 
         ScrollReveal().reveal('.text-principal', {
-            distance: '50px',
+            distance: '100px',
             origin: 'left',
-            duration: 1800,
+            duration: 2000,
             opacity: 0,
             reset: true
         });
+
+        ScrollReveal().reveal('.text-second', {
+            distance: '100px',
+            origin: 'left',
+            duration: 2500,
+            opacity: 0,
+            reset: true
+        });
+
+        //Animação de imagens dos projetos
+        ScrollReveal().reveal('.image-rectangular', {
+            distance: '50px',
+            origin: 'bottom',
+            duration: 2000,
+            opacity: 0,
+            reset: true
+        });
+
+        ScrollReveal().reveal('.image-large', {
+            distance: '50px',
+            origin: 'top',
+            duration: 1000,
+            opacity: 0,
+            reset: true
+        });
+
+        //Animação de imagens pequenas dos projetos
+        const firstImageSquare = document.querySelectorAll('.image-square')[0];
+        const lastImageSquare = document.querySelectorAll('.image-square')[1];
+        ScrollReveal().reveal(firstImageSquare, {
+            distance: '50px',
+            origin: 'top',
+            duration: 3000,
+            opacity: 0,
+            reset: true
+        });
+
+        ScrollReveal().reveal(lastImageSquare, {
+            distance: '50px',
+            origin: 'bottom',
+            duration: 3000,
+            opacity: 0,
+            reset: true
+        });
+
     </script>
 </body>
 
