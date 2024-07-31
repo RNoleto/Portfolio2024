@@ -38,7 +38,7 @@
                     <p class="tag">E</p>
                     <p class="sub" style="margin-left: 12px;"><?php echo get_post_meta(get_the_ID(), 'cargo_hero', true); ?></p>
                     <p class="sub" style="margin-left: 12px; width: 386px;"><?php echo get_post_meta(get_the_ID(), 'descricao_hero', true); ?></p>
-                    <p><i class="fas fa-map-marker-alt"></i><?php echo get_post_meta(get_the_ID(), 'localizacao', true); ?></p>
+                    <p class="localization"><i class="fas fa-map-marker-alt"></i><?php echo get_post_meta(get_the_ID(), 'localizacao', true); ?></p>
                 </div>
                 <!-- Fim de Inserção de campos Hero usando wordpress como CMS -->
             </div>
@@ -130,10 +130,46 @@
             reset: true
         });
 
+        ScrollReveal().reveal('.sub', {
+            distance: '100px',
+            origin: 'left',
+            duration: 2500,
+            opacity: 0,
+            reset: true
+        });
+
         ScrollReveal().reveal('.text-second', {
             distance: '100px',
             origin: 'left',
             duration: 2500,
+            opacity: 0,
+            reset: true
+        });
+
+        ScrollReveal().reveal('.localization', {
+            distance: '100px',
+            origin: 'left',
+            duration: 3000,
+            opacity: 0,
+            reset: true
+        });
+
+        const firstTextSecond = document.querySelectorAll('#aboutme .text-second')[1];
+        const lastTextSecond = document.querySelectorAll('#aboutme .text-second')[2];
+
+        //Animação de text-second em Aboutme
+        ScrollReveal().reveal(firstTextSecond, {
+            distance: '50px',
+            origin: 'right',
+            durantion: 2500,
+            opacity: 0,
+            reset: true
+        });
+
+        ScrollReveal().reveal(lastTextSecond, {
+            distance: '50px',
+            origin: 'right',
+            durantion: 2500,
             opacity: 0,
             reset: true
         });
